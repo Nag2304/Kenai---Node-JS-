@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
+console.log('Absolute file path:', path.join(__dirname, 'itemBranch.json'));
+
 app.get('/data', (req, res) => {
   fs.readFile(path.join(__dirname, 'itemBranch.json'), 'utf8', (err, data) => {
     if (err) {
