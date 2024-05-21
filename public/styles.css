@@ -1,0 +1,101 @@
+/* Style for the entire table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 4px solid #000; /* Thicker outer border */
+}
+
+/* Style for table headers */
+th {
+    background-color: #4CAF50; /* Green background for headers */
+    color: white;
+    border: 2px solid #000; /* Thicker border for headers */
+    padding: 10px;
+    text-align: left;
+    font-weight: bold; /* Make the font bold */
+    font-size: 18px; /* Increase font size */
+    font-family: 'Roboto', sans-serif; /* Apply a good font */
+}
+
+/* Style for table data cells */
+td {
+    border: 1px solid #000; /* Thin inner borders */
+    padding: 10px;
+    font-family: 'Roboto', sans-serif; /* Apply a good font */
+}
+
+/* Additional styling to make table look nicer */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Style for the heading */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #4CAF50; /* Green color for the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+/* Style for filter container */
+.group-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 20px; /* Align to the left */
+    margin-bottom: 20px;
+}
+
+.group-box .filter-item {
+    margin-bottom: 10px;
+}
+
+.group-box label {
+    display: inline-block;
+    width: 120px; /* Adjust as needed */
+    font-weight: bold;
+}
+
+.group-box input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.group-box input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.group-box #submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.group-box #submit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for data container */
+#data-container {
+    margin-left: 20px; /* Add left margin */
+}
+
+/* Background color for the body */
+body {
+    background-color: #f5f5dc; /* Light beige background */
+}

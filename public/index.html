@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Item Availability</h1>
+    <div id="filter-container" class="group-box">
+        <div class="filter-item">
+            <label for="item-number">Item Number:</label>
+            <input type="text" id="item-number" placeholder="Enter Item Number">
+        </div>
+        <div class="filter-item">
+            <label for="branch-plant">Branch Plant:</label>
+            <input type="text" id="branch-plant" placeholder="Enter Branch Plant">
+        </div>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div id="data-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
