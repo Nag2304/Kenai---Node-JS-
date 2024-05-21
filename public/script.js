@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function fetchData(itemNumber, branchPlant) {
     fetch('/data')
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then((data) => {
         // Clear previous data
         clearData();
@@ -100,7 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         dataContainer.appendChild(table);
       })
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        alert('There was a problem fetching the data. Please try again later.');
+      });
   }
 
   function clearData() {
