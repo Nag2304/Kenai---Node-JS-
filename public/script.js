@@ -37,22 +37,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const headers = [
           'Item',
           'Branch Plant',
+          'Lot/Serial',
           'Location',
           'On Hand',
-          'Secondary On Hand',
-          'Committed',
-          'Secondary Committed',
           'Available',
-          'Secondary Available',
-          'On Receipt',
-          'Lot Status Code',
-          'Last Rcpt Date',
-          'Lot/Serial',
-          'Memo Lot 1',
         ];
         headers.forEach((headerText) => {
           const th = document.createElement('th');
-          th.textContent = headerText;
+          if (headerText == 'Item') {
+            th.textContent = 'Item Number';
+          } else if (headerText == 'Lot/Serial') {
+            th.textContent = 'Lot Serial Number';
+          } else if (headerText == 'On Hand') {
+            th.textContent = 'On Hand Qty';
+          } else if (headerText == 'Available') {
+            th.textContent = 'Available Qty';
+          } else {
+            th.textContent = headerText;
+          }
+
           headerRow.appendChild(th);
         });
         table.appendChild(headerRow);
